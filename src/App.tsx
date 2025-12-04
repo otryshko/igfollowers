@@ -6,7 +6,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Pagination from '@mui/material/Pagination';
 import Typography from '@mui/material/Typography';
-import { Stack } from '@mui/system';
 import React from 'react';
 import './App.css';
 import FileUpload from './FileUpload';
