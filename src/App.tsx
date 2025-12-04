@@ -54,7 +54,7 @@ const App = () => {
         <Grid item sm={6}> 
           <Box textAlign="left">
             <Typography variant="h6" gutterBottom>
-              Followers
+              Followers1
             </Typography>
             <FileUpload id="1" setUserNames={setFollowers}/>
           </Box>
