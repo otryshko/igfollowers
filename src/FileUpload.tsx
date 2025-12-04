@@ -65,7 +65,13 @@ const FileUpload = (params: {id: string, setUserNames: (arg0: string[]) => void;
         const s = await readFileAsync(value);
         const parser = new DOMParser();
         const doc = parser.parseFromString(s, "text/html");
-        const elements = [...doc.getElementsByTagName('a')].filter(el => el['target'] === '_blank').map(el => el.innerText)
+        const elements = [...doc.getElementsByTagName('a')]
+          .filter(el => el['target'] === '_blank')
+          .map(el => {
+            const text = el.innerText;
+            const match = text.match(/https:\/\/www\.instagram\.com\/_u\/(.+)/);
+            return match ? match[1] : text;
+          })
         all_names = all_names.concat(elements)
 
       }
